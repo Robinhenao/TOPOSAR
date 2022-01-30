@@ -45,7 +45,7 @@
           <Group type="102" alignment="0" attributes="0">
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTabbedPane1" max="32767" attributes="0"/>
+              <Component id="jTabbedPane1" pref="637" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -218,9 +218,6 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="TextField_name">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextField_nameActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="TextField_lastname">
                 </Component>
@@ -252,17 +249,11 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="GUARDAR"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button_guardar_clientActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="Button_cancelar_client">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="CANCELAR"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button_cancelar_clientActionPerformed"/>
-                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -344,11 +335,18 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="Pane_add_client1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="129" max="32767" attributes="0"/>
-                      <Component id="Pane_view_clients2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="Pane_add_producto" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="180" max="32767" attributes="0"/>
+                      <Component id="Pane_view_producto" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="Pane_modify_producto" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="852" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -356,17 +354,25 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Pane_add_client1" min="-2" max="-2" attributes="0"/>
-                          <Component id="Pane_view_clients2" min="-2" max="-2" attributes="0"/>
+                      <Component id="Pane_view_producto" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="230" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="Pane_add_producto" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="Pane_modify_producto" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="413" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="184" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="Pane_view_clients2">
+            <Container class="javax.swing.JPanel" name="Pane_view_producto">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="cc" type="rgb"/>
@@ -378,7 +384,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace pref="19" max="32767" attributes="0"/>
-                          <Component id="ScrollPane_client2" min="-2" pref="534" max="-2" attributes="0"/>
+                          <Component id="ScrollPane_producto" min="-2" pref="534" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -394,14 +400,14 @@
                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                           <Component id="label_titulo_table2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="49" max="32767" attributes="0"/>
-                          <Component id="ScrollPane_client2" min="-2" pref="452" max="-2" attributes="0"/>
+                          <Component id="ScrollPane_producto" min="-2" pref="452" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="ScrollPane_client2">
+                <Container class="javax.swing.JScrollPane" name="ScrollPane_producto">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
@@ -429,7 +435,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="Pane_add_client1">
+            <Container class="javax.swing.JPanel" name="Pane_add_producto">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="cc" type="rgb"/>
@@ -453,17 +459,17 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="label_nombre1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="label_apellido1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="label_cedula1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="label_celular1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_nombre_producto" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_precio" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_nit" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_descripcion" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="TextField_name1" alignment="0" pref="153" max="32767" attributes="0"/>
-                                      <Component id="TextField_lastname1" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="TextField_id1" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="TextField_cell1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="TextField_name_producto" alignment="0" pref="153" max="32767" attributes="0"/>
+                                      <Component id="TextField_price" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="TextField_nit" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="TextField_description" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -471,9 +477,9 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="Button_cancelar_client1" min="-2" max="-2" attributes="0"/>
+                          <Component id="Button_cancelar_producto" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                          <Component id="Button_guardar_client1" min="-2" max="-2" attributes="0"/>
+                          <Component id="Button_guardar_producto" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -485,28 +491,28 @@
                           <Component id="label_titulo_ingreso1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="TextField_name1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_nombre1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="TextField_name_producto" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_nombre_producto" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="TextField_lastname1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_apellido1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="TextField_price" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_precio" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="TextField_id1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="label_cedula1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="TextField_nit" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_nit" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="TextField_cell1" alignment="3" min="-2" pref="119" max="-2" attributes="0"/>
-                              <Component id="label_celular1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="TextField_description" alignment="3" min="-2" pref="119" max="-2" attributes="0"/>
+                              <Component id="label_descripcion" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="29" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="Button_guardar_client1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Button_cancelar_client1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="Button_guardar_producto" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="Button_cancelar_producto" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       </Group>
@@ -522,52 +528,176 @@
                     <Property name="text" type="java.lang.String" value="INGRESAR PRODCUTO"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="TextField_name1">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TextField_name1ActionPerformed"/>
-                  </Events>
+                <Component class="javax.swing.JTextField" name="TextField_name_producto">
                 </Component>
-                <Component class="javax.swing.JTextField" name="TextField_lastname1">
+                <Component class="javax.swing.JTextField" name="TextField_price">
                 </Component>
-                <Component class="javax.swing.JTextField" name="TextField_id1">
+                <Component class="javax.swing.JTextField" name="TextField_nit">
                 </Component>
-                <Component class="javax.swing.JTextField" name="TextField_cell1">
+                <Component class="javax.swing.JTextField" name="TextField_description">
                 </Component>
-                <Component class="javax.swing.JLabel" name="label_nombre1">
+                <Component class="javax.swing.JLabel" name="label_nombre_producto">
                   <Properties>
                     <Property name="text" type="java.lang.String" value=" NOMBRE"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="label_apellido1">
+                <Component class="javax.swing.JLabel" name="label_precio">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="PRECIO"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="label_cedula1">
+                <Component class="javax.swing.JLabel" name="label_nit">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="NIT"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="label_celular1">
+                <Component class="javax.swing.JLabel" name="label_descripcion">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="DESCRIPCION"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="Button_guardar_client1">
+                <Component class="javax.swing.JButton" name="Button_guardar_producto">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="GUARDAR"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button_guardar_client1ActionPerformed"/>
-                  </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="Button_cancelar_client1">
+                <Component class="javax.swing.JButton" name="Button_cancelar_producto">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="CANCELAR"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button_cancelar_client1ActionPerformed"/>
-                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="Pane_modify_producto">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="cc" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                  <Component id="label_titulo_ingreso2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="label_nombre_producto1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_precio1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_nit1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_descripcion1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="TextField_name_producto_modify" alignment="0" pref="153" max="32767" attributes="0"/>
+                                      <Component id="TextField_price_modify" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="TextField_nit_modify" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="TextField_description_modify" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="Button_cancelar_producto_modify" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                          <Component id="Button_modify_producto" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="label_titulo_ingreso2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="TextField_name_producto_modify" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_nombre_producto1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="TextField_price_modify" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_precio1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="TextField_nit_modify" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_nit1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="TextField_description_modify" alignment="3" min="-2" pref="119" max="-2" attributes="0"/>
+                              <Component id="label_descripcion1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="29" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="Button_modify_producto" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="Button_cancelar_producto_modify" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="label_titulo_ingreso2">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="0" red="0" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="INGRESAR PRODCUTO"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="TextField_name_producto_modify">
+                </Component>
+                <Component class="javax.swing.JTextField" name="TextField_price_modify">
+                </Component>
+                <Component class="javax.swing.JTextField" name="TextField_nit_modify">
+                </Component>
+                <Component class="javax.swing.JTextField" name="TextField_description_modify">
+                </Component>
+                <Component class="javax.swing.JLabel" name="label_nombre_producto1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value=" NOMBRE"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="label_precio1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="PRECIO"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="label_nit1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="NIT"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="label_descripcion1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="DESCRIPCION"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="Button_modify_producto">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="GUARDAR"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="Button_cancelar_producto_modify">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="CANCELAR"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -590,7 +720,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="605" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="828" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
