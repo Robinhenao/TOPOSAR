@@ -2,16 +2,19 @@ package views;
 
 import javax.swing.table.DefaultTableModel;
 import scripts.consulta;
+import utils.cliente;
 import utils.producto;
 
 public class view_main extends javax.swing.JFrame {
     private consulta consul;
     private producto produc;
+    private cliente client; 
    
     public view_main() {
         initComponents();
         consul=new consulta();
         table_model_producto();
+        table_model_cliente();
         
     }
 
@@ -47,7 +50,7 @@ public class view_main extends javax.swing.JFrame {
         Pane_producto = new javax.swing.JPanel();
         Pane_view_producto = new javax.swing.JPanel();
         ScrollPane_producto = new javax.swing.JScrollPane();
-        Table_producto = new javax.swing.JTable();
+        Table_product = new javax.swing.JTable();
         label_titulo_table2 = new javax.swing.JLabel();
         TabbedPane_producto = new javax.swing.JTabbedPane();
         Pane_add_producto = new javax.swing.JPanel();
@@ -176,6 +179,11 @@ public class view_main extends javax.swing.JFrame {
         label_celular.setText("CELULAR");
 
         Button_guardar_client.setText("GUARDAR");
+        Button_guardar_client.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_guardar_clientActionPerformed(evt);
+            }
+        });
 
         Button_cancelar_client.setText("CANCELAR");
 
@@ -306,7 +314,7 @@ public class view_main extends javax.swing.JFrame {
 
         Pane_view_producto.setBackground(new java.awt.Color(153, 204, 255));
 
-        Table_producto.setModel(new javax.swing.table.DefaultTableModel(
+        Table_product.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -317,7 +325,7 @@ public class view_main extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        ScrollPane_producto.setViewportView(Table_producto);
+        ScrollPane_producto.setViewportView(Table_product);
 
         label_titulo_table2.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         label_titulo_table2.setText("LISTA CLIENTES");
@@ -579,11 +587,25 @@ public class view_main extends javax.swing.JFrame {
         String description=TextField_description_producto.getText();
         produc= new producto(1,name,price,cost,quantity,description);
         consul.registrar_producto(produc);
+        table_model_producto();
     }//GEN-LAST:event_Button_guardar_productoActionPerformed
 
-private void table_model_producto(){
-    Table_producto.setModel(consul.consulta_inventario());
-}
+    private void Button_guardar_clientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_guardar_clientActionPerformed
+        String name=TextField_name.getText();
+        String lastname=TextField_lastname.getText();
+        int cell=Integer.parseInt(TextField_id.getText());
+        String email=TextField_cell.getText();
+        client= new cliente(1,name,lastname,cell,email);
+        consul.registrar_cliente(client);
+        table_model_cliente();
+    }//GEN-LAST:event_Button_guardar_clientActionPerformed
+    private void table_model_cliente(){
+        Table_client.setModel(consul.consulta_cliente());
+    }
+
+    private void table_model_producto(){
+        Table_product.setModel(consul.consulta_inventario());
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Button_cancelar_client;
@@ -605,7 +627,7 @@ private void table_model_producto(){
     private javax.swing.JScrollPane ScrollPane_producto;
     private javax.swing.JTabbedPane TabbedPane_producto;
     private javax.swing.JTable Table_client;
-    private javax.swing.JTable Table_producto;
+    private javax.swing.JTable Table_product;
     private javax.swing.JTextField TextField_cell;
     private javax.swing.JTextField TextField_description_producto;
     private javax.swing.JTextField TextField_description_producto_modify;

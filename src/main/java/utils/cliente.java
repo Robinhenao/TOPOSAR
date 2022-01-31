@@ -1,19 +1,26 @@
 package utils;
 
-public class persona {
-
+public class cliente {
+    private int id;
     private String name;
     private String lastname;
-    private int id;
-    private String cell;
+    private int cell;
     private String email;
 
-    public persona(String name, String lastname, int id, String cell, String email) {
+    public cliente(int id, String name, String lastname, int cell, String email) {
+        this.id = id;
         this.name = name;
         this.lastname = lastname;
-        this.id = id;
         this.cell = cell;
         this.email = email;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -32,19 +39,11 @@ public class persona {
         this.lastname = lastname;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getCell() {
+    public int getCell() {
         return cell;
     }
 
-    public void setCell(String cell) {
+    public void setCell(int cell) {
         this.cell = cell;
     }
 
@@ -56,5 +55,6 @@ public class persona {
         this.email = email;
     }
 
+    
    
 }
