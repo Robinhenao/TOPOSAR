@@ -1,13 +1,15 @@
 package app;
 
-import scripts.conexionDB;
+import scripts.consulta;
+import utils.producto;
 import views.view_main;
 
 public class app_main {
     public static void main(String[] args) {
-        //prueba
-        conexionDB conectar=new conexionDB();    
-        System.out.println(conectar.conectar());
+        //consulta cs=new consulta();
+        //producto pro=new producto(1,"nombre",5200,6000,5,"prueba para llenar");
+
+        //cs.registrar_producto(pro);
 
          
         java.awt.EventQueue.invokeLater(new Runnable() {

@@ -19,7 +19,7 @@ public class conexionDB {
     }
 
 
-    public static Connection conectar(){
+    public  Connection conectar(){
         if (cx==null) {
             try {
                 Class.forName(driver);

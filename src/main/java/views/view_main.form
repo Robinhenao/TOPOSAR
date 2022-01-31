@@ -30,7 +30,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <Component id="PaneHead" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
@@ -43,7 +43,7 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <Component id="PaneHead" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jTabbedPane1" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -52,25 +52,25 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanel1">
+    <Container class="javax.swing.JPanel" name="PaneHead">
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="PaneHead2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jPanel2" alignment="1" max="32767" attributes="0"/>
+              <Component id="PaneHead2" alignment="1" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel2">
+        <Container class="javax.swing.JPanel" name="PaneHead2">
 
           <Layout>
             <DimensionLayout dim="0">
@@ -188,7 +188,7 @@
             </DimensionLayout>
           </Layout>
         </Container>
-        <Container class="javax.swing.JPanel" name="PaneTabberd_client">
+        <Container class="javax.swing.JPanel" name="Pane_cliente">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="cc" red="99" type="rgb"/>
@@ -231,7 +231,7 @@
             <Container class="javax.swing.JPanel" name="Pane_add_client">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="cc" red="99" type="rgb"/>
+                  <Color blue="ff" green="cc" red="66" type="rgb"/>
                 </Property>
               </Properties>
 
@@ -442,7 +442,7 @@
             </Container>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="jPanel3">
+        <Container class="javax.swing.JPanel" name="Pane_producto">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="cc" red="99" type="rgb"/>
@@ -461,7 +461,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
-                      <Component id="jTabbedPane2" min="-2" pref="573" max="-2" attributes="0"/>
+                      <Component id="TabbedPane_producto" min="-2" pref="573" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="Pane_view_producto" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="302" max="32767" attributes="0"/>
@@ -473,7 +473,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTabbedPane2" min="-2" pref="434" max="-2" attributes="0"/>
+                          <Component id="TabbedPane_producto" min="-2" pref="434" max="-2" attributes="0"/>
                           <Component id="Pane_view_producto" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -523,7 +523,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="Table_client2">
+                    <Component class="javax.swing.JTable" name="Table_producto">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="4" rowCount="4">
@@ -547,7 +547,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JTabbedPane" name="jTabbedPane2">
+            <Container class="javax.swing.JTabbedPane" name="TabbedPane_producto">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
               <SubComponents>
@@ -573,22 +573,22 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="label_nit" min="-2" max="-2" attributes="0"/>
-                                          <Component id="label_precio" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="label_id_producto" min="-2" max="-2" attributes="0"/>
+                                          <Component id="label_precio_producto" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="label_nombre_producto" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="label_descripcion" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_descripcion_producto" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Component id="TextField_name_producto" max="32767" attributes="0"/>
-                                  <Component id="TextField_price" max="32767" attributes="0"/>
-                                  <Component id="TextField_nit" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="TextField_description" alignment="0" pref="315" max="32767" attributes="0"/>
+                                  <Component id="TextField_price_producto" max="32767" attributes="0"/>
+                                  <Component id="TextField_id_producto" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="TextField_description_producto" alignment="0" pref="315" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                           </Group>
@@ -601,7 +601,7 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
-                              <Component id="label_titulo_ingreso1" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_titulo_ingreso_producto" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="239" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -610,7 +610,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                              <Component id="label_titulo_ingreso1" min="-2" max="-2" attributes="0"/>
+                              <Component id="label_titulo_ingreso_producto" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="TextField_name_producto" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -618,18 +618,18 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="label_precio" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="TextField_price" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_precio_producto" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="TextField_price_producto" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="TextField_nit" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="label_nit" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="TextField_id_producto" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="label_id_producto" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="TextField_description" min="-2" pref="119" max="-2" attributes="0"/>
-                                  <Component id="label_descripcion" min="-2" max="-2" attributes="0"/>
+                                  <Component id="TextField_description_producto" min="-2" pref="119" max="-2" attributes="0"/>
+                                  <Component id="label_descripcion_producto" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="52" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -642,7 +642,7 @@
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="label_titulo_ingreso1">
+                    <Component class="javax.swing.JLabel" name="label_titulo_ingreso_producto">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="0" green="0" red="0" type="rgb"/>
@@ -655,11 +655,11 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="TextField_name_producto">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="TextField_price">
+                    <Component class="javax.swing.JTextField" name="TextField_price_producto">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="TextField_nit">
+                    <Component class="javax.swing.JTextField" name="TextField_id_producto">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="TextField_description">
+                    <Component class="javax.swing.JTextField" name="TextField_description_producto">
                     </Component>
                     <Component class="javax.swing.JLabel" name="label_nombre_producto">
                       <Properties>
@@ -669,7 +669,7 @@
                         <Property name="text" type="java.lang.String" value=" NOMBRE"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="label_precio">
+                    <Component class="javax.swing.JLabel" name="label_precio_producto">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial Black" size="11" style="0"/>
@@ -677,7 +677,7 @@
                         <Property name="text" type="java.lang.String" value="PRECIO"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="label_nit">
+                    <Component class="javax.swing.JLabel" name="label_id_producto">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial Black" size="11" style="0"/>
@@ -685,7 +685,7 @@
                         <Property name="text" type="java.lang.String" value="NIT"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="label_descripcion">
+                    <Component class="javax.swing.JLabel" name="label_descripcion_producto">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial Black" size="11" style="0"/>
@@ -697,6 +697,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="GUARDAR"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button_guardar_productoActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="Button_cancelar_producto">
                       <Properties>
@@ -729,7 +732,7 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="label_nombre_producto1" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="label_precio1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="label_nit1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="label_id" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                                   </Group>
@@ -741,9 +744,9 @@
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="TextField_name_producto_modify" alignment="0" pref="287" max="32767" attributes="0"/>
-                                  <Component id="TextField_price_modify" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="TextField_nit_modify" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="TextField_description_modify" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="TextField_price_producto_modify" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="TextField_id_producto_modify" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="TextField_description_producto_modify" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
                           </Group>
@@ -773,21 +776,21 @@
                                           <Component id="label_nombre_producto1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="TextField_price_modify" min="-2" max="-2" attributes="0"/>
+                                      <Component id="TextField_price_producto_modify" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="TextField_nit_modify" min="-2" max="-2" attributes="0"/>
+                                      <Component id="TextField_id_producto_modify" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                       <Component id="label_precio1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="label_nit1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="label_id" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="label_descripcion1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="TextField_description_modify" min="-2" pref="119" max="-2" attributes="0"/>
+                                  <Component id="TextField_description_producto_modify" min="-2" pref="119" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="56" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -813,11 +816,11 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="TextField_name_producto_modify">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="TextField_price_modify">
+                    <Component class="javax.swing.JTextField" name="TextField_price_producto_modify">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="TextField_nit_modify">
+                    <Component class="javax.swing.JTextField" name="TextField_id_producto_modify">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="TextField_description_modify">
+                    <Component class="javax.swing.JTextField" name="TextField_description_producto_modify">
                     </Component>
                     <Component class="javax.swing.JLabel" name="label_nombre_producto1">
                       <Properties>
@@ -835,7 +838,7 @@
                         <Property name="text" type="java.lang.String" value="PRECIO"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="label_nit1">
+                    <Component class="javax.swing.JLabel" name="label_id">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Arial Black" size="11" style="0"/>
