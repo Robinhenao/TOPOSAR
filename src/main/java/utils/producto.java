@@ -4,21 +4,13 @@ package utils;
 public class producto {
 private String name;
 private String price;
-private int nid;
+private int id;
 private String description;
 
-    public producto(String name, String price, int nid, String description) {
+    public producto(String name, String price, int id, String description) {
         this.name = name;
         this.price = price;
-        this.nid = nid;
-        this.description = description;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
+        this.id = id;
         this.description = description;
     }
 
@@ -38,12 +30,21 @@ private String description;
         this.price = price;
     }
 
-    public int getNid() {
-        return nid;
+    public int getId() {
+        return id;
     }
 
-    public void setNid(int nid) {
-        this.nid = nid;
+    public void setId(int id) {
+        this.id = id;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     
 }

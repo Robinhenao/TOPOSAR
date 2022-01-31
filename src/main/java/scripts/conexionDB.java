@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 
 public class conexionDB {
     
-    private static final String bd="";
+    private static final String bd="toposar";
     private static final String url="jdbc:mysql://localhost:3306/";
     private static final String user="root";
     private static final String password="1234";
@@ -24,9 +24,9 @@ public class conexionDB {
             try {
                 Class.forName(driver);
                 cx=DriverManager.getConnection(url+bd,user,password);
-                System.out.println("SE conecto a BD"+bd);
+                System.out.println("SE conecto a BD "+bd);
             } catch (ClassNotFoundException  | SQLException ex) { 
-                System.out.println("No se conecto a BD"+bd);
+                System.out.println("No se conecto a BD "+bd);
                 Logger.getLogger(conexionDB.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
