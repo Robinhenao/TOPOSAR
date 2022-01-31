@@ -1,5 +1,6 @@
 package views;
 
+import javax.swing.table.DefaultTableModel;
 import scripts.consulta;
 import utils.producto;
 
@@ -10,6 +11,7 @@ public class view_main extends javax.swing.JFrame {
     public view_main() {
         initComponents();
         consul=new consulta();
+        table_model_producto();
         
     }
 
@@ -579,7 +581,9 @@ public class view_main extends javax.swing.JFrame {
         consul.registrar_producto(produc);
     }//GEN-LAST:event_Button_guardar_productoActionPerformed
 
-
+private void table_model_producto(){
+    Table_producto.setModel(consul.consulta_inventario());
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Button_cancelar_client;
