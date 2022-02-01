@@ -1,6 +1,5 @@
 package views;
 
-import javax.swing.table.DefaultTableModel;
 import scripts.consulta;
 import utils.cliente;
 import utils.producto;
@@ -585,6 +584,7 @@ public class view_main extends javax.swing.JFrame {
         double cost=Double.parseDouble(TextField_price_producto.getText());
         int quantity=15;
         String description=TextField_description_producto.getText();
+
         produc= new producto(1,name,price,cost,quantity,description);
         consul.registrar_producto(produc);
         table_model_producto();
@@ -593,12 +593,15 @@ public class view_main extends javax.swing.JFrame {
     private void Button_guardar_clientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_guardar_clientActionPerformed
         String name=TextField_name.getText();
         String lastname=TextField_lastname.getText();
-        int cell=Integer.parseInt(TextField_id.getText());
+        int cc=Integer.parseInt(TextField_id.getText());
+        int cell=Integer.parseInt(TextField_cell.getText());
         String email=TextField_cell.getText();
-        client= new cliente(1,name,lastname,cell,email);
+        client= new cliente(1,name,lastname,cc,cell,email);
+
         consul.registrar_cliente(client);
         table_model_cliente();
     }//GEN-LAST:event_Button_guardar_clientActionPerformed
+    
     private void table_model_cliente(){
         Table_client.setModel(consul.consulta_cliente());
     }

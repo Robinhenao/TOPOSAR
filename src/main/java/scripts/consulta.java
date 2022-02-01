@@ -9,7 +9,7 @@ import utils.cliente;
 import utils.producto;
 
 public class consulta {
-    private final String SQL_INSERT_cliente ="INSERT INTO clientes(nombre, apellido, celular, correo) values(?,?,?,?)";
+    private final String SQL_INSERT_cliente ="INSERT INTO clientes(nombre, apellido,cedula, celular, correo) values(?,?,?,?,?)";
     private final String SQL_INSERT_producto ="INSERT INTO productos(nombre, precio, costo, cantidad, descripcion) values(?,?,?,?,?)";
     private PreparedStatement ps;
     private Statement pc;
@@ -57,11 +57,12 @@ public class consulta {
 
     public DefaultTableModel consulta_cliente(){
         String sql="SELECT * FROM clientes";
-        String[] registro =new String[5];
+        String[] registro =new String[6];
         DefaultTableModel model = new DefaultTableModel();
         model.addColumn("id");
         model.addColumn("Nombre");
         model.addColumn("Lastname");
+        model.addColumn("Cedula");
         model.addColumn("Celular");
         model.addColumn("email");
    
@@ -75,6 +76,7 @@ public class consulta {
                 registro[2]=result.getString(3);
                 registro[3]=result.getString(4);
                 registro[4]=result.getString(5);
+                registro[5]=result.getString(6);
                 
                 model.addRow(registro);  
             }
@@ -92,8 +94,9 @@ public class consulta {
             ps=cn.conectar().prepareStatement(SQL_INSERT_cliente);
             ps.setString(1, cliente.getName());
             ps.setString(2, cliente.getLastname());
-            ps.setInt(3, cliente.getCell());
-            ps.setString(4, cliente.getEmail());
+            ps.setInt(3, cliente.getCc());
+            ps.setInt(4, cliente.getCell());
+            ps.setString(5, cliente.getEmail());
             
             ps.execute();
             

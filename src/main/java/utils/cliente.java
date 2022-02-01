@@ -4,13 +4,15 @@ public class cliente {
     private int id;
     private String name;
     private String lastname;
+    private int cc;
     private int cell;
     private String email;
 
-    public cliente(int id, String name, String lastname, int cell, String email) {
+    public cliente(int id, String name, String lastname, int cc, int cell, String email) {
         this.id = id;
         this.name = name;
         this.lastname = lastname;
+        this.cc = cc;
         this.cell = cell;
         this.email = email;
     }
@@ -39,6 +41,14 @@ public class cliente {
         this.lastname = lastname;
     }
 
+    public int getCc() {
+        return cc;
+    }
+
+    public void setCc(int cc) {
+        this.cc = cc;
+    }
+
     public int getCell() {
         return cell;
     }
@@ -55,6 +65,5 @@ public class cliente {
         this.email = email;
     }
 
-    
    
 }
