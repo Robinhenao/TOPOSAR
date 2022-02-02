@@ -92,7 +92,7 @@ public class view_main extends javax.swing.JFrame {
         ScrollPane_client = new javax.swing.JScrollPane();
         Table_client = new javax.swing.JTable();
         label_titulo_table = new javax.swing.JLabel();
-        jTabbedPane2 = new javax.swing.JTabbedPane();
+        TabbedPane_cliente = new javax.swing.JTabbedPane();
         Pane_add_client = new javax.swing.JPanel();
         label_titulo_ingreso = new javax.swing.JLabel();
         TextField_name_cliente = new javax.swing.JTextField();
@@ -144,12 +144,12 @@ public class view_main extends javax.swing.JFrame {
         Button_cancelar_producto = new javax.swing.JButton();
         Pane_modify_producto = new javax.swing.JPanel();
         label_titulo_ingreso_modify = new javax.swing.JLabel();
+        TextField_id_producto_modify = new javax.swing.JTextField();
         TextField_name_modify = new javax.swing.JTextField();
         TextField_cost_producto_modify = new javax.swing.JTextField();
         TextField_price_producto_modify = new javax.swing.JTextField();
         TextField_quantity_producto_modify = new javax.swing.JTextField();
         TextField_description_producto_modify = new javax.swing.JTextField();
-        TextField_id_producto_modify = new javax.swing.JTextField();
         Button_guardar_producto_modify = new javax.swing.JButton();
         Button_cancelar_producto_modify = new javax.swing.JButton();
         Button_load_producto_modify = new javax.swing.JButton();
@@ -230,12 +230,6 @@ public class view_main extends javax.swing.JFrame {
         jPanel6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel3.setText("FECHA:");
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
 
         jLabel4.setText("CLIENTE:");
 
@@ -891,19 +885,13 @@ public class view_main extends javax.swing.JFrame {
                 .addGap(30, 30, 30))
         );
 
-        jTabbedPane2.addTab("INGRESAR CLIENTE", Pane_add_client);
+        TabbedPane_cliente.addTab("INGRESAR CLIENTE", Pane_add_client);
 
         Pane_modify_client.setBackground(new java.awt.Color(102, 204, 255));
 
         label_titulo_ingreso1.setBackground(new java.awt.Color(0, 0, 0));
         label_titulo_ingreso1.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         label_titulo_ingreso1.setText("MODIFICAR CLIENTE");
-
-        TextField_id_cliente_modifiy.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TextField_id_cliente_modifiyActionPerformed(evt);
-            }
-        });
 
         label_celular1.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
         label_celular1.setText("CELULAR");
@@ -923,8 +911,18 @@ public class view_main extends javax.swing.JFrame {
         Button_cancelar_cliente_modify.setText("CANCELAR");
 
         Button_guardar_cliente_modifiy.setText("GUARDAR");
+        Button_guardar_cliente_modifiy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_guardar_cliente_modifiyActionPerformed(evt);
+            }
+        });
 
         Button_load_cliente_modifiy.setText("CARGAR");
+        Button_load_cliente_modifiy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_load_cliente_modifiyActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Pane_modify_clientLayout = new javax.swing.GroupLayout(Pane_modify_client);
         Pane_modify_client.setLayout(Pane_modify_clientLayout);
@@ -999,7 +997,7 @@ public class view_main extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane2.addTab("MODIFICAR CLIENTE", Pane_modify_client);
+        TabbedPane_cliente.addTab("MODIFICAR CLIENTE", Pane_modify_client);
 
         javax.swing.GroupLayout Pane_clienteLayout = new javax.swing.GroupLayout(Pane_cliente);
         Pane_cliente.setLayout(Pane_clienteLayout);
@@ -1007,7 +1005,7 @@ public class view_main extends javax.swing.JFrame {
             Pane_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Pane_clienteLayout.createSequentialGroup()
                 .addGap(119, 119, 119)
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 509, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TabbedPane_cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 509, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addComponent(Pane_view_clients, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(586, Short.MAX_VALUE))
@@ -1021,7 +1019,7 @@ public class view_main extends javax.swing.JFrame {
                         .addComponent(Pane_view_clients, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(Pane_clienteLayout.createSequentialGroup()
                         .addGap(66, 66, 66)
-                        .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(TabbedPane_cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
@@ -1189,6 +1187,11 @@ public class view_main extends javax.swing.JFrame {
         });
 
         Button_load_producto_modify.setText("CARGAR");
+        Button_load_producto_modify.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_load_producto_modifyActionPerformed(evt);
+            }
+        });
 
         label_id_producto_modify.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
         label_id_producto_modify.setText("ID");
@@ -1381,13 +1384,31 @@ public class view_main extends javax.swing.JFrame {
         TextField_email_cliente.setText("");
     }//GEN-LAST:event_Button_cancelar_clientActionPerformed
 
-    private void TextField_id_cliente_modifiyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextField_id_cliente_modifiyActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextField_id_cliente_modifiyActionPerformed
+    private void Button_load_producto_modifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_load_producto_modifyActionPerformed
+        
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    }//GEN-LAST:event_Button_load_producto_modifyActionPerformed
+
+    private void Button_load_cliente_modifiyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_load_cliente_modifiyActionPerformed
+        client=consul.modificar_cliente_load(Integer.parseInt(TextField_id_cliente_modifiy.getText()));
+        TextField_name_cliente_modifiy.setText(client.getName());
+        TextField_lastname_cliente_modifiy.setText(client.getLastname());
+        //TextField_cc_cliente_modifiy.setText(String.valueOf(client.getCc()));
+        TextField_cell_cliente_modifiy.setText(String.valueOf(client.getCell()));
+        TextField_email_cliente_modifiy.setText(client.getEmail());
+        client=null;
+    }//GEN-LAST:event_Button_load_cliente_modifiyActionPerformed
+
+    private void Button_guardar_cliente_modifiyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_guardar_cliente_modifiyActionPerformed
+        String name=TextField_name_cliente_modifiy.getText();
+        String lastname=TextField_lastname_cliente_modifiy.getText();
+        int cc=151515;///Integer.parseInt(TextField_cc_cliente_modifiy.getText());
+        int cell=Integer.parseInt(TextField_cell_cliente_modifiy.getText());
+        String email=TextField_email_cliente_modifiy.getText();
+        client=new cliente(1,name,lastname,cc,cell,email);
+        consul.modificar_cliente(client);
+    }//GEN-LAST:event_Button_guardar_cliente_modifiyActionPerformed
     
     private void table_model_cliente(){
         Table_client.setModel(consul.consulta_cliente());
@@ -1420,6 +1441,7 @@ public class view_main extends javax.swing.JFrame {
     private javax.swing.JPanel Pane_view_producto;
     private javax.swing.JScrollPane ScrollPane_client;
     private javax.swing.JScrollPane ScrollPane_producto;
+    private javax.swing.JTabbedPane TabbedPane_cliente;
     private javax.swing.JTabbedPane TabbedPane_producto;
     private javax.swing.JTable Table_client;
     private javax.swing.JTable Table_product;
@@ -1499,7 +1521,6 @@ public class view_main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
