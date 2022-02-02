@@ -161,7 +161,7 @@ public class consulta {
                                     + "correo='"+client.getEmail()+"' WHERE cedula="+client.getCc();
         try {
             ps=cn.conectar().prepareStatement(SQL_UPDATE_cliente);
-            ps.execute();
+            ps.executeUpdate();
             System.out.println("se modifico");
         } catch (SQLException e) {
             System.err.println("error sql "+e.getMessage());
@@ -200,7 +200,7 @@ public class consulta {
  + "                                costo='"+product.getCost()+"', cantidad='"+product.getQuantity()+"', descripcion='"+product.getDescription()+"' WHERE id_producto="+product.getId();
         try {
             ps=cn.conectar().prepareStatement(SQL_UPDATE_producto);
-            ps.execute();
+            ps.executeUpdate();
             System.out.println("se modifico producto");
         } catch (SQLException e) {
             System.err.println("error sql "+e.getMessage());
