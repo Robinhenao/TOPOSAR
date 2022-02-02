@@ -73,9 +73,9 @@ public class view_main extends javax.swing.JFrame {
         Pane_add_producto = new javax.swing.JPanel();
         label_titulo_ingreso_producto = new javax.swing.JLabel();
         TextField_name_producto = new javax.swing.JTextField();
+        TextField_cost_producto = new javax.swing.JTextField();
         TextField_price_producto = new javax.swing.JTextField();
         TextField_quantity_producto = new javax.swing.JTextField();
-        TextField_cost_producto = new javax.swing.JTextField();
         TextField_description_producto = new javax.swing.JTextField();
         label_nombre_producto = new javax.swing.JLabel();
         label_precio_producto = new javax.swing.JLabel();
@@ -87,11 +87,11 @@ public class view_main extends javax.swing.JFrame {
         Pane_modify_producto = new javax.swing.JPanel();
         label_titulo_ingreso_modify = new javax.swing.JLabel();
         TextField_name_modify = new javax.swing.JTextField();
-        TextField_cost_modify = new javax.swing.JTextField();
-        TextField_price_modify = new javax.swing.JTextField();
-        TextField_quantity_modify2 = new javax.swing.JTextField();
-        TextField_description_producto1 = new javax.swing.JTextField();
-        TextField_id_modify = new javax.swing.JTextField();
+        TextField_cost_producto_modify = new javax.swing.JTextField();
+        TextField_price_producto_modify = new javax.swing.JTextField();
+        TextField_quantity_producto_modify = new javax.swing.JTextField();
+        TextField_description_producto_modify = new javax.swing.JTextField();
+        TextField_id_producto_modify = new javax.swing.JTextField();
         Button_guardar_producto_modify = new javax.swing.JButton();
         Button_cancelar_producto_modify = new javax.swing.JButton();
         Button_load_producto_modify = new javax.swing.JButton();
@@ -255,6 +255,11 @@ public class view_main extends javax.swing.JFrame {
         });
 
         Button_cancelar_client.setText("CANCELAR");
+        Button_cancelar_client.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_cancelar_clientActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Pane_add_clientLayout = new javax.swing.GroupLayout(Pane_add_client);
         Pane_add_client.setLayout(Pane_add_clientLayout);
@@ -518,6 +523,11 @@ public class view_main extends javax.swing.JFrame {
         });
 
         Button_cancelar_producto.setText("CANCELAR");
+        Button_cancelar_producto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_cancelar_productoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Pane_add_productoLayout = new javax.swing.GroupLayout(Pane_add_producto);
         Pane_add_producto.setLayout(Pane_add_productoLayout);
@@ -597,6 +607,11 @@ public class view_main extends javax.swing.JFrame {
         Button_guardar_producto_modify.setText("GUARDAR");
 
         Button_cancelar_producto_modify.setText("CANCELAR");
+        Button_cancelar_producto_modify.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_cancelar_producto_modifyActionPerformed(evt);
+            }
+        });
 
         Button_load_producto_modify.setText("CARGAR");
 
@@ -642,20 +657,20 @@ public class view_main extends javax.swing.JFrame {
                                 .addComponent(label_quantity_producto_modify)
                                 .addGap(38, 38, 38)))
                         .addGroup(Pane_modify_productoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TextField_quantity_modify2, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TextField_quantity_producto_modify, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(Pane_modify_productoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(Pane_modify_productoLayout.createSequentialGroup()
                                     .addComponent(Button_cancelar_producto_modify)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(Button_guardar_producto_modify))
-                                .addComponent(TextField_price_modify)
+                                .addComponent(TextField_price_producto_modify)
                                 .addComponent(TextField_name_modify, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(TextField_description_producto1, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(TextField_description_producto_modify, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(Pane_modify_productoLayout.createSequentialGroup()
-                                    .addComponent(TextField_id_modify, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TextField_id_producto_modify, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(Button_load_producto_modify)))
-                            .addComponent(TextField_cost_modify, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(TextField_cost_producto_modify, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(Pane_modify_productoLayout.createSequentialGroup()
                         .addGap(173, 173, 173)
                         .addComponent(label_titulo_ingreso_modify)))
@@ -669,7 +684,7 @@ public class view_main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(Pane_modify_productoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(label_id_producto_modify)
-                    .addComponent(TextField_id_modify, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TextField_id_producto_modify, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Button_load_producto_modify))
                 .addGap(34, 34, 34)
                 .addGroup(Pane_modify_productoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -678,19 +693,19 @@ public class view_main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(Pane_modify_productoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(label_cost_producto_modify)
-                    .addComponent(TextField_cost_modify, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TextField_cost_producto_modify, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(Pane_modify_productoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(label_precio_producto_modify)
-                    .addComponent(TextField_price_modify, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TextField_price_producto_modify, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(Pane_modify_productoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(label_quantity_producto_modify)
-                    .addComponent(TextField_quantity_modify2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TextField_quantity_producto_modify, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(Pane_modify_productoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(label_descripcion_producto_modify)
-                    .addComponent(TextField_description_producto1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TextField_description_producto_modify, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addGroup(Pane_modify_productoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Button_cancelar_producto_modify)
@@ -770,6 +785,26 @@ public class view_main extends javax.swing.JFrame {
         consul.registrar_cliente(client);
         table_model_cliente();
     }//GEN-LAST:event_Button_guardar_clientActionPerformed
+
+    private void Button_cancelar_producto_modifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_cancelar_producto_modifyActionPerformed
+        
+    }//GEN-LAST:event_Button_cancelar_producto_modifyActionPerformed
+
+    private void Button_cancelar_productoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_cancelar_productoActionPerformed
+        TextField_name_producto.setText("");
+        TextField_price_producto.setText("");
+        TextField_cost_producto.setText("");
+        TextField_quantity_producto.setText("");
+        TextField_description_producto.setText("");
+    }//GEN-LAST:event_Button_cancelar_productoActionPerformed
+
+    private void Button_cancelar_clientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_cancelar_clientActionPerformed
+        TextField_name_cliente.setText("");
+        TextField_lastname_cliente.setText("");
+        TextField_id_cliente.setText("");
+        TextField_cell_cliente.setText("");
+        TextField_email_cliente.setText("");
+    }//GEN-LAST:event_Button_cancelar_clientActionPerformed
     
     private void table_model_cliente(){
         Table_client.setModel(consul.consulta_cliente());
@@ -807,25 +842,25 @@ public class view_main extends javax.swing.JFrame {
     private javax.swing.JTable Table_product;
     private javax.swing.JTextField TextField_cell_cliente;
     private javax.swing.JTextField TextField_cell_cliente_modifiy;
-    private javax.swing.JTextField TextField_cost_modify;
     private javax.swing.JTextField TextField_cost_producto;
+    private javax.swing.JTextField TextField_cost_producto_modify;
     private javax.swing.JTextField TextField_description_producto;
-    private javax.swing.JTextField TextField_description_producto1;
+    private javax.swing.JTextField TextField_description_producto_modify;
     private javax.swing.JTextField TextField_email_cliente;
     private javax.swing.JTextField TextField_email_cliente_modifiy;
     private javax.swing.JTextField TextField_id_cliente;
     private javax.swing.JTextField TextField_id_cliente_modifiy;
-    private javax.swing.JTextField TextField_id_modify;
+    private javax.swing.JTextField TextField_id_producto_modify;
     private javax.swing.JTextField TextField_lastname_cliente;
     private javax.swing.JTextField TextField_lastname_cliente_modifiy;
     private javax.swing.JTextField TextField_name_cliente;
     private javax.swing.JTextField TextField_name_cliente_modifiy;
     private javax.swing.JTextField TextField_name_modify;
     private javax.swing.JTextField TextField_name_producto;
-    private javax.swing.JTextField TextField_price_modify;
     private javax.swing.JTextField TextField_price_producto;
-    private javax.swing.JTextField TextField_quantity_modify2;
+    private javax.swing.JTextField TextField_price_producto_modify;
     private javax.swing.JTextField TextField_quantity_producto;
+    private javax.swing.JTextField TextField_quantity_producto_modify;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel4;
