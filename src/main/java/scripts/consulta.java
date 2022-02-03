@@ -66,8 +66,6 @@ public class consulta {
         model.addColumn("Cedula");
         model.addColumn("Celular");
         model.addColumn("email");
-   
-        
         try {
             pc=cn.conectar().createStatement();
             ResultSet result=pc.executeQuery(sql);
@@ -77,15 +75,13 @@ public class consulta {
                 registro[2]=result.getString(3);
                 registro[3]=result.getString(4);
                 registro[4]=result.getString(5);
-                registro[5]=result.getString(6);
-                
+                registro[5]=result.getString(6); 
                 model.addRow(registro);  
             }
         } catch (Exception e) {
             System.out.println(e);
         } finally {
             pc=null;
-           
         }
         return model;
     }

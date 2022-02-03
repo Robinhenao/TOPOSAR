@@ -1,7 +1,5 @@
 package app;
 
-import scripts.consulta;
-import utils.producto;
 import views.view_main;
 
 public class app_main {
